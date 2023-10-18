@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -8,7 +9,6 @@
 }
 
 header {
-    margin-bottom: 30px;
     background-color: #fff;
     width: 100%;
     position: fixed;
@@ -16,20 +16,24 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 200px;
-} 
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+}
+
 header h2 {
     color: #08b121;
     text-align: center;
 }
+
 img {
-    width: 75px;
-}
-.prod {
-    width: 250px;
+    max-width: 100%;
+    height: auto; /* Ensure images scale proportionally */
 }
 
-.hef{
+.prod {
+    width: 100%; /* Make the image responsive for smaller screens */
+}
+
+.hef {
     text-decoration: none;
     color: #08b121;
     text-transform: uppercase;
@@ -37,24 +41,26 @@ img {
     font-size: 1.8em;
 }
 
-.navigation a{
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+}
+
+.navigation a {
     text-decoration: none;
     color: #08b121;
     font-weight: 500;
     font-size: 1.1em;
-    padding-left: 30px;
-
+    padding-left: 15px; /* Reduce the padding for smaller screens */
 }
 
-.navigation a:hover{
-    color: #0d7002;
+section {
+    padding: 50px 20px; /* Adjust padding for smaller screens */
 }
 
-section{
-    padding: 100px 200px;
-}
-
-.main{
+.main {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -63,119 +69,97 @@ section{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-  }
+}
 
-
-.main h2{
+.main h2 {
     color: #fff;
-    font-size: 1.4em;
-    font-weight: 500;
+    font-size: 1.2em; /* Adjust font size for smaller screens */
 }
 
 .main h2 span {
-    animation: pulsate 2s ease-in-out infinite; /* Adjust the animation duration and timing function as needed */
+    animation: pulsate 2s ease-in-out infinite;
     transform-origin: center;
     display: inline-block;
     margin-top: 10px;
     color: #08b121;
-    font-size: 3em;
-    font-weight: 600;
+    font-size: 2.5em; /* Adjust font size for smaller screens */
 }
-@keyframes pulsate {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2); /* Increase the scale to create a "pulsating" effect */
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
+
+/* Add your existing keyframes pulsate animation here */
+
 .main h3 {
     color: #fff;
-    font-size: 2em;
+    font-size: 1.5em; /* Adjust font size for smaller screens */
     font-weight: 700;
     letter-spacing: 1px;
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* Adjust margin for smaller screens */
 }
 
 .main-btn {
     color: #fff;
     background-color: #08b121;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.1em; /* Adjust font size for smaller screens */
     font-weight: 600;
     display: inline-block;
-    padding: 0.9375em 2.1875em;
-    letter-spacing: 1px;
+    padding: 0.7em 1.5em; /* Adjust padding for smaller screens */
     border-radius: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Adjust margin for smaller screens */
     transition: 0.7s ease;
 }
 
-.main-btn:hover{
-    background-color: #08b121;
-    transform: scale(1.1);
-}
-
-.social-icons a{
+.social-icons a {
     color: #fff;
-    font-size: 1.7em;
-    padding-right: 20px;
-
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+    margin-right: 15px; /* Increase spacing between icons for smaller screens */
 }
 
 .title {
     display: flex;
     justify-content: center;
     color: #08b121;
-    font-size: 2.2em;
+    font-size: 2em;
     font-weight: 800;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .content {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column; /* Change to column layout for smaller screens */
 }
+
 button {
     background-color: #fff;
     border: none;
     color: #000000;
-    padding: 15px; 
-    text-align: center; 
-    text-decoration: none; 
-    display: inline-block; 
-    font-size: 15px; 
-    margin: 15px;
-    cursor: pointer; 
-    border-radius: 10px; 
+    padding: 10px; /* Adjust padding for smaller screens */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px; /* Adjust font size for smaller screens */
+    margin: 10px; /* Adjust margin for smaller screens */
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 .card {
     background-color: #fff;
-    width: 21.25em;
-    box-shadow: 0 5px 25px rgba(1, 1, 1, 20%);
+    width: 100%; /* Make cards span full width for smaller screens */
+    box-shadow: 0 5px 15px rgba(1, 1, 1, 20%); /* Reduce box shadow for smaller screens */
     border-radius: 10px;
-    padding: 25px;
-    margin: 15px;
+    padding: 15px; /* Adjust padding for smaller screens */
+    margin: 10px; /* Adjust margin for smaller screens */
     transition: 0.7s ease;
-}
-
-.card:hover {
-    transform: scale(1.1);
 }
 
 .icon {
     color: #08b121;
-    font-size: 8em;
+    font-size: 4em; /* Adjust font size for smaller screens */
     text-align: center;
 }
-.icon a{
+
+.icon a {
     color: #08b121;
 }
 
@@ -185,10 +169,11 @@ button {
 
 .info h3 {
     color: #08b121;
-    font-size: 1.2em;
+    font-size: 1.2em; /* Adjust font size for smaller screens */
     font-weight: 700;
     margin: 10px;
 }
+
 .info h3 a {
     color: #08b121;
     text-decoration: none;
@@ -199,6 +184,7 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
 }
+
 footer {
     background-color: #f0f0f0;
     text-align: center;
@@ -208,95 +194,50 @@ footer {
     padding: 10px;
     border-top: 1px solid #ccc;
 }
+
 .contact img {
-    width: 600px;
+    max-width: 100%; /* Ensure images scale proportionally */
     display: block;
-    margin-left: auto;
-    margin-right: auto 
+    margin: 0 auto; /* Center the image horizontally */
 }
+
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 20px;
-  }
-  .product-grid h2{
-    font-size: 1.6em;
+    grid-template-columns: repeat(1, 1fr); /* Adjust the number of columns for smaller screens */
+    gap: 15px; /* Adjust the gap for smaller screens */
+}
+
+.product-grid h2 {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
     color: #000000;
-  }
-  .product-grid p{
+}
+
+.product-grid p {
     color: #000000;
-  }
-  
-  
-  .product-grid button {
+}
+
+.product-grid button {
     background-color: #fff;
     border: none;
     color: #000000;
-    padding: 15px; 
-    text-align: center; 
-    text-decoration: none; 
-    display: inline-block; 
-    font-size: 15px; 
-    margin: 15px;
-    cursor: pointer; 
-    border-radius: 10px; 
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px; /* Adjust font size for smaller screens */
+    margin: 10px; /* Adjust margin for smaller screens */
+    cursor: pointer;
+    border-radius: 10px;
     transition: 0.7s ease;
-  }
- 
-  
-  /* Style individual products */
-  .product {
+}
+
+.product {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
-  }
-  
-  .product img {
-   width: 200px;
-  }
-
-    
-
-    
-
-
-	
-  /* Mobile styles */
-@media (max-width: 768px) {
-    header {
-        padding: 10px 20px;
-    }
-    header h2 {
-        font-size: 1.6em;
-    }
-    .navigation {
-        display: none;
-    }
-    .mobile-menu-icon {
-        display: block;
-    }
-    .main h2 {
-        font-size: 1.2em;
-    }
-    .main h2 span {
-        font-size: 2em;
-    }
-    .main h3 {
-        font-size: 1.5em;
-    }
-    .main-btn {
-        font-size: 1em;
-        padding: 0.7em 1.5em;
-    }
 }
 
-/* Medium and large screens */
-@media (min-width: 769px) {
-    .navigation {
-        display: flex;
-    }
-    .mobile-menu-icon {
-        display: none;
-    }
-    /* Add more styles for medium and large screens */
+.product img {
+    max-width: 100%;
+    height: auto;
 }
